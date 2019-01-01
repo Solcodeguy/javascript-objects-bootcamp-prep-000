@@ -1,22 +1,11 @@
-var recipes = {};
+var playlist = {LinkinPark: 'In the End'}
 
-function updateObjectWithKeyAndValue(object, key, value){
-return Object.assign({}, object, {[key]: value});
+function updatePlaylist(playlist, artistName, songTitle){
+  playlist[artistName] = songTitle
+  return playlist;
 }
 
-function destructivelyUpdateObjectWithKeyAndValue(object, key, value){
-  var prop = key;
-  object[prop] = value;
-  return object;
-}
-
-function deleteFromObjectByKey(object, key){
-  var newObj = Object.assign({}, object);
-  delete newObj[key];
-  return newObj;
-}
-
-function destructivelyDeleteFromObjectByKey(object, key){
-  delete object.key;
-  return object;
+function removeFromPlaylist(playlist, artistName){
+  delete playlist[artistName];
+  return playlist;
 }
