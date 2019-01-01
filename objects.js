@@ -1,4 +1,4 @@
-let playlist = {
+var playlist = {
   artist1: "song1",
   artist2: "song2",
   artist3: "song3"
@@ -16,3 +16,6 @@ function removeFromPlaylist(thePlaylist, artistName) {
 }
 
 removeFromPlaylist(playlist, "artist2");
+
+
+
